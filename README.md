@@ -1,6 +1,6 @@
 # PyIPU: Python Implementation of Iterative Proportional Updating
 
-PyIPU is a Python package that implements the Iterative Proportional Updating (IPU) algorithm proposed by Ye et al. (2009) in the paper "Methodology to match distributions of both household and person attributes in generation of synthetic populations".
+PyIPU is a Python package that implements the Iterative Proportional Updating (IPU) algorithm proposed by Ye et al. (2009) in the paper "Methodology to match distributions of both household and person attributes in generation of synthetic populations". This implementation is based on the [ipfr](https://github.com/dkyleward/ipfr) R package.
 
 ## Overview
 
