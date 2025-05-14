@@ -6,11 +6,12 @@ PyIPU is a Python package that implements the Iterative Proportional Updating (I
 
 The IPU algorithm is a general case of iterative proportional fitting that can satisfy two disparate sets of marginals that do not agree on a single total. A common example is balancing population data using household- and person-level marginal controls for survey expansion or synthetic population creation.
 
-Key features:
+**Key features**:
 - Support for both household and person level constraints
 - Handling of multiple geographies
 - Configurable convergence criteria
 - Detailed reporting of results
+- Faster than traditional IPF
 
 ## Installation
 
