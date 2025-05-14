@@ -65,7 +65,7 @@ result = ipu(hh_seed, hh_targets, max_iterations=5)
 # Access the results
 print(result['weight_tbl'])  # Household table with weights
 print(result['primary_comp'])  # Comparison of results to targets
-result['weight_dist']  # Matplotlib figure showing weight distribution
+result['weight_dist']  # Matplotlib figure showing weight distribution for diagnostics
 ```
 
 ### Household and Person Example
@@ -277,7 +277,9 @@ MIT
 If you use PyIPU in your research, please cite:
 
 ```
-- William, O. A. (2025). *PyIPU*: Python implementation of the Iterative Proportional Updating (IPU) algorithm [https://www.github.com/williamagyapong/pyipu](Version 0.1.0).
+- William, O. A. (2025). *PyIPU*: Python implementation of the Iterative 
+Proportional Updating (IPU) algorithm [https://www.github.com/williamagyapong/pyipu]
+(Version 0.1.0).
 
 - Ye, X., Konduri, K., Pendyala, R. M., Sana, B., & Waddell, P. (2009). 
 A methodology to match distributions of both household and person attributes 
