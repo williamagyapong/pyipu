@@ -320,4 +320,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Acknowledgment
 
-A big thanks to Kyle Ward, the author of the `ipfr` package which provided the implementation logic for `pyipu`. It is fair to say that `pyipu` is the Python version of `ipfr`.
+A big thanks to Kyle Ward, the author of the [ipfr](https://github.com/dkyleward/ipfr) package which provided the implementation logic for `pyipu`. It is fair to say that `pyipu` is the Python version of `ipfr`.
