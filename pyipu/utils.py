@@ -56,6 +56,9 @@ def check_tables(primary_seed, primary_targets, secondary_seed=None,
     if "weight" not in primary_seed.columns:
         primary_seed = primary_seed.copy()
         primary_seed["weight"] = 1
+    else: 
+        # warn user about the side effect of the weight column
+        print("Warning: The primary seed data contains a 'weight' column. This column will be treated as observation weights and updated during the IPU process. Please rename the weight column before calling ipu() if it has a different meaning!")
     
     # Check the primary_id
     secondary_seed_exists = secondary_seed is not None

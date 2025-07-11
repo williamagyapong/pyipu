@@ -78,6 +78,7 @@ def synthesize(weight_tbl, group_by=None, primary_id="id"):
             # Calculate the number of samples for this group
             group_weight = group_df['weight'].sum()
             group_samples = round(group_weight)
+            # group_samples = group_weight # avoid rounding
             
             if group_samples > 0:
                 # Sample from the group with replacement, weighted by 'weight'
@@ -98,7 +99,7 @@ def synthesize(weight_tbl, group_by=None, primary_id="id"):
             p=weight_tbl['weight'] / weight_tbl['weight'].sum()
         )
         synthetic_table = weight_tbl.loc[sampled_indices].copy()
-    
+        # synthetic_table = weight_tbl.sample(n_samples, replace=True, weights=weight_tbl['weight']).copy()
     # Drop weight-related columns
     cols_to_drop = ['weight', 'avg_weight', 'weight_factor']
     synthetic_table = synthetic_table.drop(columns=[col for col in cols_to_drop if col in synthetic_table.columns])

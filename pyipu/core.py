@@ -167,6 +167,9 @@ def ipu(primary_seed, primary_targets,
     
     # Add the geo information back
     seed = pd.merge(seed, geo_equiv, on=primary_id)
+
+    # Ensure 'weight' column is float type to avoid dtype incompatibility
+    seed["weight"] = seed["weight"].astype(float)
     
     # Store a vector of attribute column names to loop over later
     # Don't include primary_id, geo columns, or 'weight' in the vector

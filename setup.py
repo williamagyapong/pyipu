@@ -19,7 +19,7 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     author='William O. Agyapong',
-    author_email='awofosuhene@gmail.com',
+    author_email='williamofosuagyapong@gmail.com',
     url='https://github.com/williamagyapong/pyipu',
     packages=find_packages(),
     install_requires=[

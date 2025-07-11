@@ -71,68 +71,9 @@ result['weight_dist']  # Matplotlib figure showing weight distribution for diagn
 
 ### Household and Person Example
 
-```python
-import pandas as pd
-from pyipu import ipu
+TODO: Include an example of using the PyIPU package with household and person level constraints to demonstrate how to use the IPU algorithm with both household and person level seed tables and targets, which is a common use case in population synthesis.
 
-# Create household seed table
-hh_seed = pd.DataFrame({
-    'id': [1, 2, 3],
-    'hh_size': [1, 2, 3],
-    'income': ['low', 'med', 'high'],
-    'geo_taz': [1, 1, 2],
-    'weight': [1, 1, 1]
-})
 
-# Create person seed table
-per_seed = pd.DataFrame({
-    'id': [1, 2, 2, 3, 3, 3],
-    'age': ['young', 'young', 'old', 'young', 'mid', 'old'],
-    'gender': ['m', 'f', 'm', 'f', 'm', 'f']
-})
-
-# Create household targets
-hh_targets = {}
-hh_targets['hh_size'] = pd.DataFrame({
-    'geo_taz': [1, 2],
-    '1': [100, 50],
-    '2': [200, 150],
-    '3': [300, 400]
-})
-hh_targets['income'] = pd.DataFrame({
-    'geo_taz': [1, 2],
-    'low': [200, 150],
-    'med': [250, 200],
-    'high': [150, 250]
-})
-
-# Create person targets
-per_targets = {}
-per_targets['age'] = pd.DataFrame({
-    'geo_taz': [1, 2],
-    'young': [400, 350],
-    'mid': [300, 400],
-    'old': [200, 250]
-})
-per_targets['gender'] = pd.DataFrame({
-    'geo_taz': [1, 2],
-    'm': [450, 500],
-    'f': [450, 500]
-})
-
-# Run IPU
-result = ipu(
-    hh_seed, hh_targets,
-    secondary_seed=per_seed, secondary_targets=per_targets,
-    primary_id='id', secondary_importance=0.5,
-    max_iterations=50, verbose=True
-)
-
-# Access the results
-print(result['weight_tbl'])  # Household table with weights
-print(result['primary_comp'])  # Comparison of household results to targets
-print(result['secondary_comp'])  # Comparison of person results to targets
-```
 
 ### Matrix Balancing Example
 
@@ -159,7 +100,7 @@ print("Row sums:", balanced_mtx.sum(axis=1))
 print("Column sums:", balanced_mtx.sum(axis=0))
 ```
 
-### Synthetic Population Generation Example
+### Synthetic Population Generation Example 1
 
 ```python
 import pandas as pd
