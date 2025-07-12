@@ -17,7 +17,7 @@ class TestIPU(unittest.TestCase):
         hh_seed = pd.DataFrame({
             'id': [1, 2, 3, 4],
             'siz': [1, 2, 2, 1],
-            'weight': [1, 1, 1, 1],
+            # 'weight': [1, 1, 1, 1], # weights of ones will be assigned by default
             'geo_cluster': [1, 1, 2, 2]
         })
 
@@ -163,7 +163,7 @@ class TestIPU(unittest.TestCase):
         hh_seed = pd.DataFrame({
             'id': [1, 2, 3, 4],
             'siz': [1, 2, 2, 1],
-            'weight': [1, 1, 1, 1],
+            # 'weight': [1, 1, 1, 1],
             'geo_cluster': [1, 1, 2, 2]
         })
 
