@@ -1,6 +1,7 @@
 # PyIPU: Python Implementation of Iterative Proportional Updating
 
-[![DOI](https://zenodo.org/badge/983170714.svg)](https://doi.org/10.5281/zenodo.22886299)
+<!--[![DOI](https://zenodo.org/badge/983170714.svg)](https://doi.org/10.5281/zenodo.22886299) -->
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22886299-blue)](https://doi.org/10.5281/zenodo.22886299)
 [![PyPI](https://img.shields.io/pypi/v/pyipu.svg)](https://pypi.org/project/pyipu/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/pyipu.svg)](https://pypi.org/project/pyipu/)
 [![License](https://img.shields.io/pypi/l/pyipu.svg)](https://pypi.org/project/pyipu/)
